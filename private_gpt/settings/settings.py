@@ -253,6 +253,10 @@ class OllamaSettings(BaseModel):
         120.0,
         description="Time elapsed until ollama times out the request. Default is 120s. Format is float. ",
     )
+    num_gpu: int = Field(
+        999,
+        description="Number of Layers running on GPU. (Default: 999)",
+    )
 
 
 class AzureOpenAISettings(BaseModel):

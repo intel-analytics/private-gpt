@@ -11,7 +11,7 @@ embedding:
   mode: ollama
 
 ollama:
-  llm_model: mistral
+  llm_model: llama2
   embedding_model: nomic-embed-text
   api_base: http://localhost:11434
   embedding_api_base: http://localhost:11434  # change if your embedding model runs on another ollama
@@ -22,6 +22,8 @@ ollama:
   repeat_last_n: 64       # Sets how far back for the model to look back to prevent repetition. (Default: 64, 0 = disabled, -1 = num_ctx)
   repeat_penalty: 1.2     # Sets how strongly to penalize repetitions. A higher value (e.g., 1.5) will penalize repetitions more strongly, while a lower value (e.g., 0.9) will be more lenient. (Default: 1.1)
   request_timeout: 120.0  # Time elapsed until ollama times out the request. Default is 120s. Format is float.
+  num_predict: 64         # Maximum number of tokens to predict when generating text. (Default: 128, -1 = infinite generation, -2 = fill context)
+  num_gpu: 999            # Number of Layers running on GPU. (Default: 999)
 
 vectorstore:
   database: qdrant
