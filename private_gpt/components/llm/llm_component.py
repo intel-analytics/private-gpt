@@ -125,6 +125,7 @@ class LLMComponent:
                     "top_p": ollama_settings.top_p,  # ollama and llama-cpp
                     "repeat_last_n": ollama_settings.repeat_last_n,  # ollama
                     "repeat_penalty": ollama_settings.repeat_penalty,  # ollama llama-cpp
+                    "num_gpu": ollama_settings.num_gpu,
                 }
 
                 self.llm = Ollama(
